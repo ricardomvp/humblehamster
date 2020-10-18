@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> HH </title>
+    <link rel="icon" type="image/png" href="{% static 'images/hh.jpeg' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+
+        <header>
+          {% block navbar %}
+      		  {% include 'base/navbar.html' %}
+      	  {% endblock %}
+        </header>
+
+        <div class="body">
+          {% block body %}
+      		  {% include 'base/body.html' %}
+      	  {% endblock %}
+        </div>
+
+        <footer>
+          {% block footer %}
+      		  {% include 'base/footer.html' %}
+      	  {% endblock %}
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
